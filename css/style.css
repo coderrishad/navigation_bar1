@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+.header-area {
+    background: #142440;
+    width: 100%;
+    padding: 12px 30px;
+    z-index: 999;
+    border-bottom: 2px solid #909090ad;
+    box-shadow: 0px 0px 7px 3px red;
+}
+.header-container {
+    display: table;
+    width: 100%;
+    margin: auto;
+}
+.site-logo {
+    float: left;
+    padding: 17px 0px;
+}
+.site-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px;
+}
+.site-logo span {
+    color: #ff4a04;
+}
+.site-nav-menu {
+    float: right;
+}
+.primary-menu{
+    list-style: none;
+}
+.primary-menu li {
+    display: inline-block;
+    margin: 21px 5px;
+}
+.primary-menu a {
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 15px 10px;
+    transition: .5s;
+}
+.primary-menu a:hover,
+.primary-menu .active {
+    color:#ff4a04;   
+}
+.primary-menu li a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff4a04;
+    bottom: 0px;
+    left: 0;
+    transition: all .5s;
+}
+.primary-menu li a:hover:after {
+    width: 100%;
+}
+.primary-menu li .active:after{
+    width: 100%;
+}
+.mobile-nav{
+    display: none;
+}
+.mobile-nav i{
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+
+section#hero-section {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/ny_nu1it.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Responsive css */
+
+@media only screen and (max-width: 900px) {
+    .site-nav-menu {
+        float: none;
+        position: absolute;
+        background: #142440;
+        width: 100%;
+        left: 0;
+        top: 85px;
+        padding: 30px 0px 150px 0px;
+        border-top: 1px solid #4a4848;
+        clip-path: circle(0% at 100% 0%);
+        transition: all .8s;
+    }
+    .primary-menu li {
+        display: block;
+        text-align: center;
+        margin: 25px 5px;
+    }
+    .mobile-nav{
+        display: block;
+    }
+    .mobile-menu {
+        clip-path: circle(112% at 100% 0%);
+    }
+    .primary-menu li a:after{
+        display: none;
+    }
+}
